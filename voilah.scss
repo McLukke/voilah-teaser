@@ -1,0 +1,259 @@
+/*
+    COLOURS
+#2F2333   PURPLE
+#F7E8DF   CREAM
+*/
+body {
+  background: #2F2333;
+  overflow: hidden;
+}
+
+/* ---Sliders--- */
+#leftCurtain {
+  background-image: url(/images/teaser_left.png);
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-position: top right;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  -webkit-transition: all 1500ms linear; 
+  -moz-transition: all 1500ms linear; 
+  -o-transition: all 1500ms linear; 
+  transition: all 1500ms linear;
+
+  &.opened{
+    overflow: hidden;
+    left: -50vw;
+  }
+}
+
+#rightCurtain {
+  background-image: url(/images/teaser_right.png);
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-position: top left;
+  top: 0;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  -webkit-transition: all 1500ms linear; 
+  -moz-transition: all 1500ms linear; 
+  -o-transition: all 1500ms linear; 
+  transition: all 1500ms linear;
+
+  &.opened{
+    overflow: hidden;
+    left: 100vw;
+  }
+}
+
+#mainChrome {
+
+  &.isCream
+  {
+    #voilahTopLeftCorner, #voilahTopRightCorner, #voilahBottomLeftCorner, #voilahBottomRightCorner {fill: #2F2333;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+    #border {border: 2vh solid #2F2333;
+        -webkit-transition: border 300ms linear; 
+    -moz-transition: border 300ms linear; 
+    -o-transition: border 300ms linear; 
+    transition: border 300ms linear;
+  }
+    #voilahTopLeftCorner2, #voilahTopRightCorner2, #voilahBottomLeftCorner2, #voilahBottomRightCorner2 {fill: #F7E8DF;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+    #border2 {border: 1.8vh solid #F7E8DF;
+        -webkit-transition: border 300ms linear; 
+    -moz-transition: border 300ms linear; 
+    -o-transition: border 300ms linear; 
+    transition: border 300ms linear;
+  }
+
+
+
+  }
+  /* ---Cream Border UnderLayer--- */
+  #voilahTopLeftCorner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7vh;
+    min-width: 50px;
+    fill: #F7E8DF;
+    z-index: 1;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahTopRightCorner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 7vh;
+    min-width: 50px;
+    fill: #F7E8DF;
+    z-index: 1;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahBottomLeftCorner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    width: 7vh;
+    min-width: 50px;
+    fill: #F7E8DF;
+    z-index: 1;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahBottomRightCorner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    width: 7vh;
+    min-width: 50px;
+    fill: #F7E8DF;
+    z-index: 1;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 2vh solid #F7E8DF;
+    z-index: 1;
+    -webkit-transition: border 300ms linear; 
+    -moz-transition: border 300ms linear; 
+    -o-transition: border 300ms linear; 
+    transition: border 300ms linear;
+  }
+
+  /* ---Purple Border UpperLayer--- */
+  #voilahTopLeftCorner2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 1;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahTopRightCorner2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 1;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahBottomLeftCorner2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 1;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahBottomRightCorner2 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 1;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #border2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 1.8vh solid #2F2333;
+    z-index: 1;
+        -webkit-transition: border 300ms linear; 
+    -moz-transition: border 300ms linear; 
+    -o-transition: border 300ms linear; 
+    transition: border 300ms linear;
+  }
+}
+
+/* ---Opposite Color Scheme--- */
