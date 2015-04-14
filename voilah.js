@@ -3,8 +3,15 @@ if (Meteor.isClient) {
     //$('#mainChrome').addClass('isCream');
   };
 
-  Template.movingParts.rendered = function () {
-    $('#leftCurtain, #rightCurtain').addClass('opened');
+  Template.openingSlides.rendered = function () {
+    setTimeout(function () {
+      $('#leftCurtain, #rightCurtain').addClass('opened');
+    }, 800);
+    
+    setTimeout(function () {
+      $('#leftCurtain, #rightCurtain').addClass('hidden');
+    }, 4000);
+
   };
 }
 

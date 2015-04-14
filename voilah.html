@@ -35,13 +35,13 @@
       </svg>
       <div id="border2" class="alt"></div>
     </section>
-
-    {{> yield}}
   </div>
+  {{> yield}}
+
 </template>
 
-<template name="movingParts">
-  <section class="movingParts">
+<template name="openingSlides">
+  <section class="openingSlides">
     <div id="leftCurtain">
       321
     </div>
@@ -49,4 +49,8 @@
       123
     </div>
   </section>
+  <div class="MailChimpForm">
+    {{> MailChimpListSubscribe}}
+    <p>Sign up now to receive updates</p>
+  </div>
 </template>

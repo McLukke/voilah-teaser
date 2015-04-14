@@ -3,7 +3,7 @@ Router.configure({
 });
 
 Router.route('/', function () {
-  this.render('movingParts', {
+  this.render('openingSlides', {
     data: function () { 
       // return Items.findOne({_id: this.params._id}); 
     }
