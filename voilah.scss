@@ -1,96 +1,115 @@
-/*
-    COLOURS
-#2F2333   PURPLE
+/* COLOURS
+#2F2333   DARK PURPLE
 #F7E8DF   CREAM
 */
-body {
-  background: #F7E8DF;
-  overflow: hidden;
-  height: 100vh;
+
+/* ---Fixing DIVs having 0px height--- */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-/* ---Sliders--- */
-#leftCurtain {
-  background-image: url(/images/teaser_left.png);
-  background-size: cover;
-  overflow: hidden;
-  position: absolute;
-  background-position: top right;
+.cf:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+/* ---Voilah opening background--- */
+body {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 50vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  z-index: 998;
-
-  -webkit-transition: all 1500ms linear; 
-  -moz-transition: all 1500ms linear; 
-  -o-transition: all 1500ms linear; 
-  transition: all 1500ms linear;
-
-  &.opened{
-    overflow: hidden;
-    left: -50vw;
-  }
-}
-
-#rightCurtain {
-  background-image: url(/images/teaser_right.png);
-  background-size: cover;
+  background: #F7E8DF;
   overflow: hidden;
-  position: absolute;
-  background-position: top left;
-  top: 0;
-  left: 50%;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  z-index: 998;
+  -webkit-transition: all 300ms linear; 
+  -moz-transition: all 300ms linear; 
+  -o-transition: all 300ms linear; 
+  transition: all 300ms linear;
 
-  -webkit-transition: all 1500ms linear; 
-  -moz-transition: all 1500ms linear; 
-  -o-transition: all 1500ms linear; 
-  transition: all 1500ms linear;
-
-  &.opened{
-    overflow: hidden;
-    left: 100vw;
+  &.customBackground {
+    background: green;
+    -webkit-transition: all 300ms linear; 
+    -moz-transition: all 300ms linear; 
+    -o-transition: all 300ms linear; 
+    transition: all 300ms linear;
+  }
+  &.darkBackground {
+    background: #2F2333;
+    -webkit-transition: all 300ms linear; 
+    -moz-transition: all 300ms linear; 
+    -o-transition: all 300ms linear; 
+    transition: all 300ms linear;
+  }
+  &.noBackground {
+    background: #FFFFFF;
+    -webkit-transition: all 300ms linear; 
+    -moz-transition: all 300ms linear; 
+    -o-transition: all 300ms linear; 
+    transition: all 300ms linear;
   }
 }
 
+/* ---Static borders--- */
 #mainChrome {
+  position: relative;
   pointer-events: none;
-  &.isCream
-  {
-    #voilahTopLeftCorner, #voilahTopRightCorner, #voilahBottomLeftCorner, #voilahBottomRightCorner {fill: #2F2333;
-        -webkit-transition: fill 300ms linear; 
-    -moz-transition: fill 300ms linear; 
-    -o-transition: fill 300ms linear; 
-    transition: fill 300ms linear;
+  &.darkUnderBorder {
+    #voilahTopLeftCorner, #voilahTopRightCorner, #voilahBottomLeftCorner, #voilahBottomRightCorner {
+      fill: #2F2333;
+      -webkit-transition: fill 300ms linear; 
+      -moz-transition: fill 300ms linear; 
+      -o-transition: fill 300ms linear; 
+      transition: fill 300ms linear;
+    }
+    #border {
+      border: 2vh solid #2F2333;
+      -webkit-transition: border 300ms linear; 
+      -moz-transition: border 300ms linear; 
+      -o-transition: border 300ms linear; 
+      transition: border 300ms linear;
+    }
   }
-    #border {border: 2vh solid #2F2333;
-        -webkit-transition: border 300ms linear; 
-    -moz-transition: border 300ms linear; 
-    -o-transition: border 300ms linear; 
-    transition: border 300ms linear;
+  &.noUnderBorder {
+    #voilahTopLeftCorner, #voilahTopRightCorner, #voilahBottomLeftCorner, #voilahBottomRightCorner {
+      fill-opacity: 0.0;
+      -webkit-transition: fill 300ms linear; 
+      -moz-transition: fill 300ms linear; 
+      -o-transition: fill 300ms linear; 
+      transition: fill 300ms linear;
+    }
+    #border {
+      border: 2vh solid transparent;
+      -webkit-transition: border 300ms linear; 
+      -moz-transition: border 300ms linear; 
+      -o-transition: border 300ms linear; 
+      transition: border 300ms linear;
+    }
   }
-    #voilahTopLeftCorner2, #voilahTopRightCorner2, #voilahBottomLeftCorner2, #voilahBottomRightCorner2 {fill: #F7E8DF;
-    -webkit-transition: fill 300ms linear; 
-    -moz-transition: fill 300ms linear; 
-    -o-transition: fill 300ms linear; 
-    transition: fill 300ms linear;
-  }
-    #border2 {border: 1.8vh solid #F7E8DF;
-        -webkit-transition: border 300ms linear; 
-    -moz-transition: border 300ms linear; 
-    -o-transition: border 300ms linear; 
-    transition: border 300ms linear;
-  }
-
-
-
+  &.lightUpperBorder {
+    #voilahTopLeftCorner2, #voilahTopRightCorner2, #voilahBottomLeftCorner2, #voilahBottomRightCorner2 {
+      fill: #F7E8DF;
+      -webkit-transition: fill 300ms linear; 
+      -moz-transition: fill 300ms linear; 
+      -o-transition: fill 300ms linear; 
+      transition: fill 300ms linear;
+    }
+    #border2 {
+      border: 1.8vh solid #F7E8DF;
+      -webkit-transition: border 300ms linear; 
+      -moz-transition: border 300ms linear; 
+      -o-transition: border 300ms linear; 
+      transition: border 300ms linear;
+    }
   }
   /* ---Cream Border UnderLayer--- */
   #voilahTopLeftCorner {
@@ -238,7 +257,7 @@ body {
     min-width: 50px;
     fill: #2F2333;
     z-index: 999;
-        -webkit-transition: fill 300ms linear; 
+    -webkit-transition: fill 300ms linear; 
     -moz-transition: fill 300ms linear; 
     -o-transition: fill 300ms linear; 
     transition: fill 300ms linear;
@@ -259,6 +278,64 @@ body {
   }
 }
 
+/* ---Sliders--- */
+.openingSlide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+
+#leftCurtain {
+  background-image: url(/images/teaser_left.png);
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-position: top right;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 998;
+
+  -webkit-transition: all 1500ms linear; 
+  -moz-transition: all 1500ms linear; 
+  -o-transition: all 1500ms linear; 
+  transition: all 1500ms linear;
+
+  &.opened{
+    overflow: hidden;
+    left: -50vw;
+  }
+}
+
+#rightCurtain {
+  background-image: url(/images/teaser_right.png);
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-position: top left;
+  top: 0;
+  left: 50vw;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 998;
+
+  -webkit-transition: all 1500ms linear; 
+  -moz-transition: all 1500ms linear; 
+  -o-transition: all 1500ms linear; 
+  transition: all 1500ms linear;
+
+  &.opened{
+    overflow: hidden;
+    left: 100vw;
+  }
+}
+
 /* --- MailChimp Form--- */
 .MailChimpForm {
   width: 40vw;
@@ -271,6 +348,7 @@ body {
   -o-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  z-index: 9;
 }
 
 .MailChimpForm .message {
@@ -303,3 +381,94 @@ body {
 .MailChimpForm > p {
   color: #2F2333;
 }
+
+/* ---Violah Logo--- */
+.voilahLogo {
+  position: relative;
+  background-image: url(/images/abc.png);
+  background-size: cover;
+  background-position: top left;
+  width: 40px;
+  height: 40px;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---Center Slide Content--- */
+.slideContentWrapper {
+  position: relative;
+  width: 80vw;
+  height: 65vh;
+  top: 5vh;
+
+  border: solid 1px red;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#slide1 {
+  -webkit-transition: fill 300ms linear; 
+  -moz-transition: fill 300ms linear; 
+  -o-transition: fill 300ms linear; 
+  transition: fill 300ms linear;
+
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  top: -35%; left: 0; bottom: 0; right: 0;
+  border: solid 1px red;
+}
+
+#slide2 {
+  -webkit-transition: fill 300ms linear; 
+  -moz-transition: fill 300ms linear; 
+  -o-transition: fill 300ms linear; 
+  transition: fill 300ms linear;
+
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  top: -35%; left: 0; bottom: 0; right: 0;
+  border: solid 1px red;
+}
+
+#slide3 {
+  -webkit-transition: fill 300ms linear; 
+  -moz-transition: fill 300ms linear; 
+  -o-transition: fill 300ms linear; 
+  transition: fill 300ms linear;
+
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  top: -35%; left: 0; bottom: 0; right: 0;
+  border: solid 1px red;
+}
+
+#slide4 {
+  -webkit-transition: fill 300ms linear; 
+  -moz-transition: fill 300ms linear; 
+  -o-transition: fill 300ms linear; 
+  transition: fill 300ms linear;
+
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  top: -35%; left: 0; bottom: 0; right: 0;
+  border: solid 1px red;
+}
+

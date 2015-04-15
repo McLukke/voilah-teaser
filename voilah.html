@@ -36,21 +36,45 @@
       <div id="border2" class="alt"></div>
     </section>
   </div>
-  {{> yield}}
+  {{> yield "opener"}}
 
-</template>
-
-<template name="openingSlides">
-  <section class="openingSlides">
-    <div id="leftCurtain">
-      321
-    </div>
-    <div id="rightCurtain">
-      123
-    </div>
-  </section>
+  <div class="voilahLogo"></div>
+  <div class="slideContentWrapper">
+    {{> yield}}
+  </div>
   <div class="MailChimpForm">
     {{> MailChimpListSubscribe}}
     <p>Sign up now to receive updates</p>
+  </div>
+</template>
+
+<template name="openingSlide">
+  <section class="openingSlide">
+    <div id="leftCurtain"></div>
+    <div id="rightCurtain"></div>
+  </section>
+</template>
+
+<template name="slide1">
+  <div id="slide1" >
+    This is Slide 1!
+  </div>
+</template>
+
+<template name="slide2">
+  <div id="slide2">
+    This is Slide 2!
+  </div>
+</template>
+
+<template name="slide3">
+  <div id="slide3">
+    This is Slide 3!
+  </div>
+</template>
+
+<template name="slide4">
+  <div id="slide4">
+    This is Slide 4!
   </div>
 </template>
