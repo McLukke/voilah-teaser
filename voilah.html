@@ -38,10 +38,14 @@
   </div>
   {{> yield "opener"}}
 
+
   <div class="voilahLogo"></div>
   <div class="slideContentWrapper">
-    {{> yield}}
+    <!-- {{> yield}} -->
+    {{> slideContent}}
   </div>
+
+
   <div class="MailChimpForm">
     {{> MailChimpListSubscribe}}
     <p>Sign up now to receive updates</p>
@@ -55,26 +59,76 @@
   </section>
 </template>
 
-<template name="slide1">
-  <div id="slide1" >
-    This is Slide 1!
+<template name="slideContent">
+<!--   <div id="slide1">
+    <img src="/images/logo_banner_cream@2x.png" alt="Logo Banner Light">
+  </div> -->
+
+<!--   <div id="slide2">
+    <div class="slideCenteredText">
+      <h1>Exclusive<br />Exclusivities</h1>
+      <p>masterpieces of the luxury world,<br />loved by many,<br />owned by few.</p>
+    </div>
+  </div> -->
+
+   <div id="slide3">
+    <img src="/images/slide_2.png" alt="Fashion Is Art">
+    <h1>Fashion Is Art</h1>
+    <p>tell your story by what you wear.</p>
+  </div>
+
+  <div id="slide4">
+    <img src="/images/slide_3.png" alt="Fashion Is Art">
+    <h1>Shop Curated Luxuries</h1>
+    <p>only the most sublime creations made available to you.</p>
+  </div>
+
+  <div id="slide5">
+    <img src="/images/logo_banner@2x.png" alt="Logo Banner">
+    <p>Exceptional designer pieces specially curated so</p>
+    <p>you can indulge in the most sought after luxuries.</p>
+    <p class="ending_text"><i>Launching soon.</i></p>
+  </div>
+</template>
+
+<!-- <template name="slide1">
+  <div id="slide1">
+    <img src="/images/logo_banner_cream@2x.png" alt="Logo Banner Light">
   </div>
 </template>
 
 <template name="slide2">
   <div id="slide2">
-    This is Slide 2!
+    <h1>Exclusive Exclusivities</h1>
+    <p>masterpieces of the luxury world,</p>
+    <br />
+    <p>loved by many,</p>
+    <br />
+    <p>owned by few.</p>
   </div>
 </template>
 
 <template name="slide3">
   <div id="slide3">
-    This is Slide 3!
+    <img src="/images/slide_2.png" alt="Fashion Is Art">
+    <h1>Fashion Is Art</h1>
+    <p>tell your story by what you wear.</p>
   </div>
 </template>
 
 <template name="slide4">
   <div id="slide4">
-    This is Slide 4!
+    <img src="/images/slide_3.png" alt="Fashion Is Art">
+    <h1>Shop Curated Luxuries</h1>
+    <p>only the most sublime creations made available to you.</p>
   </div>
 </template>
+
+<template name="slide5">
+  <div id="slide5">
+    <img src="/images/logo_banner@2x.png" alt="Logo Banner">
+    <p>Exceptional designer pieces specially curated so</p>
+    <p>you can indulge in the most sought after luxuries.</p>
+    <p class="ending_text"><i>Launching soon.</i></p>
+  </div>
+</template> -->
