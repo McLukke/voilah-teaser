@@ -38,18 +38,23 @@
   </div>
   {{> yield "opener"}}
 
-
-  <div class="voilahLogo"></div>
-  <div class="slideContentWrapper">
-    <!-- {{> yield}} -->
-    {{> slideContent}}
-  </div>
-
-
-  <div class="MailChimpForm">
-    {{> MailChimpListSubscribe}}
-    <p>Sign up now to receive updates</p>
-  </div>
+  <section id="slideLayout">
+    <div class="voilahLogo"></div>
+    <div class="slideContentWrapper">
+      <!-- {{> yield}} -->
+      {{> slideContent}}
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4"></div>
+        <div class="col-xs-12 col-sm-4 MailChimpForm">
+          {{> MailChimpListSubscribe}}
+          <p>Sign up now to receive updates</p>
+        </div>
+        <div class="col-xs-12 col-sm-4"></div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <template name="openingSlide">
@@ -60,34 +65,64 @@
 </template>
 
 <template name="slideContent">
-<!--   <div id="slide1">
-    <img src="/images/logo_banner_cream@2x.png" alt="Logo Banner Light">
-  </div> -->
+  <div id="slide1" class="slide enabled">
+    <img id="slide1image" src="/images/logo_banner_cream@2x.png" alt="Logo Banner Light">
+  </div>
 
-<!--   <div id="slide2">
-    <div class="slideCenteredText">
-      <h1>Exclusive<br />Exclusivities</h1>
-      <p>masterpieces of the luxury world,<br />loved by many,<br />owned by few.</p>
+  <div id="slide2" class="container-fluid slide">
+    <div class="row">
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+        <div class="slideContent">
+          <h1><span>Exclusive</span><span>Exclusivities</span></h1>
+          <p>masterpieces of the luxury world,<br />loved by many,<br />owned by few.</p>
+        </div>
+      </div>
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
     </div>
-  </div> -->
-
-   <div id="slide3">
-    <img src="/images/slide_2.png" alt="Fashion Is Art">
-    <h1>Fashion Is Art</h1>
-    <p>tell your story by what you wear.</p>
   </div>
 
-  <div id="slide4">
-    <img src="/images/slide_3.png" alt="Fashion Is Art">
-    <h1>Shop Curated Luxuries</h1>
-    <p>only the most sublime creations made available to you.</p>
+  <div id="slide3" class="container-fluid slide">
+    <div class="row">
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+        <div class="slideContent">
+          <img id="slide3image" src="/images/slide_3.png" alt="Fashion Is Art">
+          <h1>Fashion Is Art</h1>
+          <p>tell your story by what you wear.</p>
+        </div>
+      </div>
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
   </div>
 
-  <div id="slide5">
-    <img src="/images/logo_banner@2x.png" alt="Logo Banner">
-    <p>Exceptional designer pieces specially curated so</p>
-    <p>you can indulge in the most sought after luxuries.</p>
-    <p class="ending_text"><i>Launching soon.</i></p>
+  <div id="slide4" class="container-fluid slide">
+    <div class="row">
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+        <div class="slideContent">
+          <img id="slide4image" src="/images/slide_4.png" alt="Fashion Is Art">
+          <h1>Shop Curated Luxuries</h1>
+          <p>only the most sublime creations made available to you.</p>
+        </div>
+      </div>
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
+  </div>
+
+  <div id="slide5" class="container-fluid slide">
+    <div class="row">
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+        <div class="slideContent">
+          <img id="slide5image" src="/images/logo_banner@2x.png" alt="Logo Banner">
+          <p>Exceptional designer pieces specially curated so</p>
+          <p>you can indulge in the most sought after luxuries.</p>
+          <p class="ending_text">Launching soon.</p>
+        </div>
+      </div>
+      <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
   </div>
 </template>
 

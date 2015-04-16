@@ -1,4 +1,4 @@
-if (Meteor.isClient) {
+(function(){if (Meteor.isClient) {
   Template.layout.rendered = function () {
     //$('#mainChrome').addClass('darkUnderBorder');
     //$('#mainChrome').addClass('lightUpperBorder');
@@ -22,7 +22,7 @@ if (Meteor.isClient) {
     }, 4000);
   };
 
-  var slideInterval = 5000;
+  var slideInterval = 2000;
   Template.slideContent.rendered = function () {
     // console.log("slide content rendered");
     setTimeout(function () {
@@ -123,3 +123,5 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
 
 }
+
+})();
