@@ -22,7 +22,7 @@ if (Meteor.isClient) {
     }, 4000);
   };
 
-  var slideInterval = 2000;
+  var slideInterval = 5000;
   Template.slideContent.rendered = function () {
     setTimeout(function () {
       $('#slide2').addClass('enabled');
@@ -31,20 +31,20 @@ if (Meteor.isClient) {
       $('.voilahLogo').addClass('enabled');
     }, slideInterval);
 
-    // setTimeout(function () {
-    //   $('#slide3').addClass('enabled');
-    // }, slideInterval*2);
+    setTimeout(function () {
+      $('#slide3').addClass('enabled');
+    }, slideInterval*2);
 
-    // setTimeout(function () {
-    //   $('#slide4').addClass('enabled');
-    // }, slideInterval*3);
+    setTimeout(function () {
+      $('#slide4').addClass('enabled');
+    }, slideInterval*3);
 
-    // setTimeout(function () {
-    //   $('#slide5').addClass('enabled');
-    //   $('#mainChrome').removeClass('noUnderBorder');
-    //   $('#mainChrome').addClass('darkUnderBorder');
-    //   // $('#mainChrome').addClass('lightUpperBorder');
-    // }, slideInterval*4);
+    setTimeout(function () {
+      $('#slide5').addClass('enabled');
+      $('#mainChrome').removeClass('noUnderBorder');
+      $('#mainChrome').addClass('darkUnderBorder');
+      // $('#mainChrome').addClass('lightUpperBorder');
+    }, slideInterval*4);
   };
 
 
