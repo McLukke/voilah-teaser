@@ -27,13 +27,13 @@ if (Meteor.isClient) {
     setTimeout(function () {
       $('#slide2').addClass('enabled');
       $('#mainChrome').addClass('noUnderBorder');
-      $('.MailChimpForm').addClass('enabled');
+      $('.bottomContent').addClass('enabled');
       $('.voilahLogo').addClass('enabled');
     }, slideInterval);
 
-    setTimeout(function () {
-      $('#slide3').addClass('enabled');
-    }, slideInterval*2);
+    // setTimeout(function () {
+    //   $('#slide3').addClass('enabled');
+    // }, slideInterval*2);
 
     // setTimeout(function () {
     //   $('#slide4').addClass('enabled');
@@ -43,7 +43,7 @@ if (Meteor.isClient) {
     //   $('#slide5').addClass('enabled');
     //   $('#mainChrome').removeClass('noUnderBorder');
     //   $('#mainChrome').addClass('darkUnderBorder');
-    //   $('#mainChrome').addClass('lightUpperBorder');
+    //   // $('#mainChrome').addClass('lightUpperBorder');
     // }, slideInterval*4);
   };
 

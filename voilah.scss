@@ -397,14 +397,17 @@ body {
 }
 
 /* --- MailChimp Form--- */
-.MailChimpForm 
-{ 
+.bottomContent {
+  position: fixed;
+  bottom: 3vh;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
   z-index: 500;
   -webkit-transition: z-index 300ms linear; 
   -moz-transition: z-index 300ms linear; 
   -o-transition: z-index 300ms linear; 
   transition: z-index 300ms linear;
-
   text-align: center;
 
   &.enabled {
@@ -414,6 +417,10 @@ body {
     -o-transition: z-index 300ms linear; 
     transition: z-index 300ms linear;
   }
+}
+
+.MailChimpForm 
+{
   .message {
     display: none;
     visibility: hidden;
@@ -424,7 +431,7 @@ body {
     width: 60%;
     height: 40px;
     background: transparent;
-    border : 1px solid #2F2333;
+    border : 1px solid #3E245B;
     margin : 0px;
     padding : 0px;
     text-align: center;
@@ -433,11 +440,11 @@ body {
 
   .subscribe {
     font: 14px "futura-light", sans-serif;
-    background-color: #2F2333;
+    background-color: #3E245B;
     color: #F7E8DF;
     width: 30%;
     height: 40px;
-    background: #2F2333;
+    background: #3E245B;
     border: none;
     margin: 0px;
     padding: 0px;
@@ -477,12 +484,11 @@ body {
   }
 }
 
-/* ---Center Slide Content--- */
+/* ---For slides 2 to 5--- */
 .slideContentWrapper {
   height: 85vh;
 }
 
-/* ---For slides 2 to 5--- */
 .slideContent {
   position: absolute;
   top: 0;
@@ -518,26 +524,15 @@ body {
 }
 
 #slide2 .slideContent {
-  position: relative;
+  position: absolute;
   top: 30vh;
+  width: 100%;
 }
 
 .slideContent > h1 {
   font: bold 72px "lyonbold", sans-serif;
   margin: 0;
   margin-top: 10px;
-}
-
-.slideContent > h1 > span {
-  line-height: 1;
-  width: 100%;
-  display: block;
-  float: left;
-  text-align: center;
-
-  &:last-of-type {
-    margin-top: -6px;
-  }
 }
 
 #slide2 .slideContent > p {
@@ -670,8 +665,8 @@ body {
     top: -78vh;
   }
 
-  .slideContentWrapper {
-    height: 80vh;
+  .bottomContent {
+    bottom: 2vh;
   }
 
   #slide1image {
@@ -683,9 +678,15 @@ body {
   }
 
   #slide2 .slideContent > h1 > span {
-    font-size: 36px;
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 40px;
 
     &:last-of-type {
+      margin-top: -6px;
       margin-bottom: 13px;
     }
   }
@@ -703,12 +704,20 @@ body {
   }
 
   #slide3 .slideContent > h1 {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 13px;
+    font-size: 36px;
   }
 
-  #slide3 .slideContent > p {
-    font-size: 12px;
+  #slide3 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+    }
   }
 
   #slide4 .slideContent {
@@ -723,6 +732,18 @@ body {
   #slide4 .slideContent > h1 {
     margin-top: 15px;
     font-size: 24px;
+  }
+
+  #slide4 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+    }
   }
 
   #slide5 .slideContent {
@@ -757,34 +778,71 @@ body {
   }
 }
 // sm
-@media (min-width: 600px) and (max-width: 899px) {
+@media (min-width: 600px) and (max-width: 766px) {
   #slide1image {
     max-width: 60%;
   }
 
+  .bottomContent {
+    bottom: 0;
+  }
+
+  #slide2 .slideContent > h1 {
+    font-size: 50px;
+  }
+
   #slide2 .slideContent > p {
-    font-size: 24px;
+    font-size: 17px;
+  }
+
+  #slide2 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+      margin-bottom: 13px;
+    }
   }
 
   #slide3 .slideContent {
     top: 23vh;
   }
 
-  #slide3image {
-    max-width: 55%;
-  }
-
   #slide3 .slideContent > h1 {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 36px;
   }
 
-  #slide3 .slideContent > p {
-    font-size: 12px;
+  #slide3 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+    }
   }
 
   #slide4image {
     max-width: 70%;
+  }
+
+  #slide4 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+    }
   }
 
   #slide4 .slideContent {
@@ -819,21 +877,48 @@ body {
   }
 }
 // md
-@media (min-width: 900px) and (max-width: 1199px) {
+@media (min-width: 767px) and (max-width: 1199px) {
   .voilahLogo {
     top: -85vh;
   }
 
-  .slideContentWrapper {
-    height: 87vh;
+  .bottomContent {
+    bottom: 0vh;
   }
 
   #slide1image {
     max-width: 70%;
   }
 
+  #slide2 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+      margin-bottom: 13px;
+    }
+  }
+
+  #slide2 .slideContent > h1 {
+    font-size: 60px;
+  }
+
   #slide2 .slideContent > p {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  #slide3 .slideContent > h1 {
+    margin-top: 20px;
+    font-size: 48px;
+  }
+
+  #slide3 .slideContent > p {
+    margin-top: 15px;
+    font-size: 20px;
   }
 
   #slide4image {
@@ -842,12 +927,12 @@ body {
 
   #slide4 .slideContent > h1 {
     margin-top: 70px;
-    font-size: 48px;
+    font-size: 40px;
   }
 
   #slide4 .slideContent > p {
     margin-top: 23px;
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 // lg
@@ -856,8 +941,8 @@ body {
     top: -85vh;
   }
 
-  .slideContentWrapper {
-    height: 90vh;
+  .bottomContent {
+    bottom: -3vh;
   }
 
   #slide1image {
@@ -866,6 +951,24 @@ body {
 
   #slide2 .slideContent > p {
     font-size: 24px;
+  }
+
+  #slide2 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+      margin-bottom: 13px;
+    }
+  }
+
+  #slide3 .slideContent > p {
+    margin-top: 20px;
+    font-size: 28px;
   }
 
   #slide4image {
