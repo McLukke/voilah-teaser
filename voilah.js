@@ -22,9 +22,8 @@ if (Meteor.isClient) {
     }, 4000);
   };
 
-  var slideInterval = 5000;
+  var slideInterval = 2000;
   Template.slideContent.rendered = function () {
-    // console.log("slide content rendered");
     setTimeout(function () {
       $('#slide2').addClass('enabled');
       $('#mainChrome').addClass('noUnderBorder');
@@ -36,16 +35,16 @@ if (Meteor.isClient) {
       $('#slide3').addClass('enabled');
     }, slideInterval*2);
 
-    setTimeout(function () {
-      $('#slide4').addClass('enabled');
-    }, slideInterval*3);
+    // setTimeout(function () {
+    //   $('#slide4').addClass('enabled');
+    // }, slideInterval*3);
 
-    setTimeout(function () {
-      $('#slide5').addClass('enabled');
-      $('#mainChrome').removeClass('noUnderBorder');
-      $('#mainChrome').addClass('darkUnderBorder');
-      $('#mainChrome').addClass('lightUpperBorder');
-    }, slideInterval*4);
+    // setTimeout(function () {
+    //   $('#slide5').addClass('enabled');
+    //   $('#mainChrome').removeClass('noUnderBorder');
+    //   $('#mainChrome').addClass('darkUnderBorder');
+    //   $('#mainChrome').addClass('lightUpperBorder');
+    // }, slideInterval*4);
   };
 
 

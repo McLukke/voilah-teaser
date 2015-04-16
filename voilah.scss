@@ -299,7 +299,7 @@ body {
     min-width: 50px;
     fill: #2F2333;
     z-index: 999;
-        -webkit-transition: fill 300ms linear; 
+    -webkit-transition: fill 300ms linear; 
     -moz-transition: fill 300ms linear; 
     -o-transition: fill 300ms linear; 
     transition: fill 300ms linear;
@@ -397,55 +397,60 @@ body {
 }
 
 /* --- MailChimp Form--- */
-.MailChimpForm {
+.MailChimpForm 
+{ 
   z-index: 500;
-  -webkit-transition: all 300ms linear; 
-  -moz-transition: all 300ms linear; 
-  -o-transition: all 300ms linear; 
-  transition: all 300ms linear;
+  -webkit-transition: z-index 300ms linear; 
+  -moz-transition: z-index 300ms linear; 
+  -o-transition: z-index 300ms linear; 
+  transition: z-index 300ms linear;
+
+  text-align: center;
 
   &.enabled {
     z-index: 996;
-    -webkit-transition: all 300ms linear; 
-    -moz-transition: all 300ms linear; 
-    -o-transition: all 300ms linear; 
-    transition: all 300ms linear;
+    -webkit-transition: z-index 300ms linear; 
+    -moz-transition: z-index 300ms linear; 
+    -o-transition: z-index 300ms linear; 
+    transition: z-index 300ms linear;
+  }
+  .message {
+    display: none;
+    visibility: hidden;
+  }
+
+  .email {
+    font: 14px "futura-light", sans-serif;
+    width: 60%;
+    height: 40px;
+    background: transparent;
+    border : 1px solid #2F2333;
+    margin : 0px;
+    padding : 0px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .subscribe {
+    font: 14px "futura-light", sans-serif;
+    background-color: #2F2333;
+    color: #F7E8DF;
+    width: 30%;
+    height: 40px;
+    background: #2F2333;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  > p {
+    font: 14px "futura-book", sans-serif;
+    color: #2F2333;
+    padding-left: 5%;
+    text-align: left;
   }
 }
 
-.MailChimpForm .message {
-  display: none;
-  visibility: hidden;
-}
-
-.MailChimpForm .email {
-  font: 14px "futura-light", sans-serif;
-  width: 60%;
-  height: 40px;
-  background: transparent;
-  border : 1px solid #2F2333;
-  margin : 0px;
-  padding : 0px;
-  text-align: center;
-  margin-bottom: 4px;
-}
-
-.MailChimpForm .subscribe {
-  font: 14px "futura-light", sans-serif;
-  background-color: #2F2333;
-  color: #F7E8DF;
-  width: 30%;
-  height: 40px;
-  background: #2F2333;
-  border: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.MailChimpForm > p {
-  font: 14px "futura-book", sans-serif;
-  color: #2F2333;
-}
 
 /* ---Violah Logo--- */
 .voilahLogo {
@@ -535,7 +540,7 @@ body {
   }
 }
 
-.slideContent > p {
+#slide2 .slideContent > p {
   clear: both;
   text-align: center;
   font: small-caps 16px "futura-book", sans-serif;
@@ -558,6 +563,10 @@ body {
   text-align: center;
 }
 
+#slide3 .slideContent > p {
+  font: small-caps 16px "futura-book", sans-serif;
+}
+
 #slide3image {
   // width: 146px;
   max-width: 100%;
@@ -566,6 +575,16 @@ body {
 
 #slide3 .slideContent > h1 {
   margin-top: 25px;
+}
+
+#slide3imageXS
+{
+  background: url('/images/slide_3.png');
+  background-size: cover;
+  background-position: top center;
+  width: 100vw;
+  height: 40vh;
+  margin-left: -30px;
 }
 
 #slide4 {
@@ -579,7 +598,8 @@ body {
 }
 
 #slide4image {
-  max-width: 100%;
+  height: 30vh;
+  max-height: 400px;
 }
 
 #slide4 .slideContent {
@@ -590,6 +610,10 @@ body {
 
 #slide4 .slideContent > h1 {
   margin-top: 20px;
+}
+
+#slide4 .slideContent p {
+  font: small-caps 16px "futura-book", sans-serif;
 }
 
 #slide5 {
@@ -624,17 +648,237 @@ body {
 .slide {
   opacity: 0;
   filter: alpha(opacity=0); // IE 5-7
-  -webkit-transition: all 300ms linear; 
-  -moz-transition: all 300ms linear; 
-  -o-transition: all 300ms linear; 
-  transition: all 300ms linear;
+  -webkit-transition: opacity 300ms linear; 
+  -moz-transition: opacity 300ms linear; 
+  -o-transition: opacity 300ms linear; 
+  transition: opacity 300ms linear;
 
   &.enabled {
     opacity: 1;
     filter: alpha(opacity=100); // IE 5-7
-    -webkit-transition: all 300ms linear; 
-    -moz-transition: all 300ms linear; 
-    -o-transition: all 300ms linear; 
-    transition: all 300ms linear;
+    -webkit-transition: opacity 300ms linear; 
+    -moz-transition: opacity 300ms linear; 
+    -o-transition: opacity 300ms linear; 
+    transition: opacity 300ms linear;
+  }
+}
+
+
+// xs
+@media (max-width: 599px) {
+  .voilahLogo {
+    top: -78vh;
+  }
+
+  .slideContentWrapper {
+    height: 80vh;
+  }
+
+  #slide1image {
+    max-width: 60%;
+  }
+
+  #slide2 .slideContent {
+    top: 30vh;
+  }
+
+  #slide2 .slideContent > h1 > span {
+    font-size: 36px;
+
+    &:last-of-type {
+      margin-bottom: 13px;
+    }
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 13px;
+  }
+
+  #slide3 .slideContent {
+    top: 20vh;
+  }
+
+  #slide3image {
+    max-width: 55%;
+  }
+
+  #slide3 .slideContent > h1 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  #slide3 .slideContent > p {
+    font-size: 12px;
+  }
+
+  #slide4 .slideContent {
+    top: 23vh;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 15px;
+    font-size: 24px;
+  }
+
+  #slide5 .slideContent {
+    top: 27vh;
+  }
+
+  #slide5image {
+    max-width: 60%;
+  }
+
+  #slide5 .slideContent > p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  #slide5 .slideContent > p.ending_text {
+    font-size: 15px;
+  }
+
+  .MailChimpForm {
+    > p {
+      font-size: 11px;
+    }
+
+    .email {
+      font-size: 11px;
+    }
+
+    .subscribe {
+      font-size: 11px;
+    }
+  }
+}
+// sm
+@media (min-width: 600px) and (max-width: 899px) {
+  #slide1image {
+    max-width: 60%;
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 24px;
+  }
+
+  #slide3 .slideContent {
+    top: 23vh;
+  }
+
+  #slide3image {
+    max-width: 55%;
+  }
+
+  #slide3 .slideContent > h1 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  #slide3 .slideContent > p {
+    font-size: 12px;
+  }
+
+  #slide4image {
+    max-width: 70%;
+  }
+
+  #slide4 .slideContent {
+    top: 23vh;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 30px;
+    font-size: 36px;
+  }
+
+  #slide5 .slideContent {
+    top: 27vh;
+  }
+
+  #slide5image {
+    max-width: 60%;
+  }
+
+  #slide5 .slideContent > p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  #slide5 .slideContent > p.ending_text {
+    font-size: 15px;
+  }
+}
+// md
+@media (min-width: 900px) and (max-width: 1199px) {
+  .voilahLogo {
+    top: -85vh;
+  }
+
+  .slideContentWrapper {
+    height: 87vh;
+  }
+
+  #slide1image {
+    max-width: 70%;
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 24px;
+  }
+
+  #slide4image {
+    max-width: 70%;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 70px;
+    font-size: 48px;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 23px;
+    font-size: 36px;
+  }
+}
+// lg
+@media (min-width: 1200px) {
+  .voilahLogo {
+    top: -85vh;
+  }
+
+  .slideContentWrapper {
+    height: 90vh;
+  }
+
+  #slide1image {
+    max-width: 80%;
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 24px;
+  }
+
+  #slide4image {
+    max-width: 100%;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 70px;
+    font-size: 48px;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 30px;
+    font-size: 28px;
   }
 }
