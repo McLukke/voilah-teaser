@@ -3,31 +3,24 @@ if (Meteor.isClient) {
     Session.set('curtainLoaded', false);
   });
 
-  Template.MailChimpListSubscribe.events ({
-    'click .subscribe': function (e, t) {
-      e.preventDefault();
+  // Template.mailchimpcustom.events ({
+  //   'click .subscribe': function (e, t) {
+  //     e.preventDefault();
 
-      var email = t.find('.email').value;
-      BootstrapModalPrompt.prompt ({
-        title: "Congratulations!",
-        content: "Your email \"" + email + "\" has been successfully added to our mailing list!"
-      }, function(result) {
-        if (result) {
-          // User confirmed it, so go do something.
-          email="";
-          t.find('.email').value="";
-        }
-      });
-    }
-  });
+  //     var email = t.find('.email').value;
+  //     BootstrapModalPrompt.prompt ({
+  //       title: "Congratulations!",
+  //       content: "Your email \"" + email + "\" has been successfully added to our mailing list!"
+  //     }, function(result) {
+  //       if (result) {
+  //         // User confirmed it, so go do something.
+  //         email="";
+  //         t.find('.email').value="";
+  //       }
+  //     });
+  //   }
+  // });
 
-
-  Template.MailChimpListSubscribe.helpers({
-  message: function() {
-    subscribeMessage = 'ffs';
-    return subscribeMessage;
-  }
-});
 
   Template.openingSlide.rendered = function () {
     setTimeout(function () {
@@ -57,8 +50,8 @@ if (Meteor.isClient) {
       $('#slide2').addClass('enabled');
       $('#mainChrome').addClass('noUnderBorder');
       $('.bottomContent').addClass('enabled');
-      $('.email').attr('placeholder','E-Mail Address');
-      $('.subscribe').text('Submit');
+      // $('.email').attr('placeholder','E-Mail Address');
+      // $('.subscribe').text('Submit');
       $('.voilahLogo').addClass('enabled');
     }, slideInterval);
 
