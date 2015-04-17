@@ -1,9 +1,9 @@
 if (Meteor.isClient) {
-  Template.layout.rendered = function () {
-    //$('#mainChrome').addClass('darkUnderBorder');
-    //$('#mainChrome').addClass('lightUpperBorder');
-    Session.set('currentSlide', 1);
-  };
+  Meteor.startup(function () {
+    Session.set('curtainLoaded', false);
+  });
+
+
 
   Template.MailChimpListSubscribe.rendered = function () {
     $('.email').attr('placeholder','E-Mail Address');
@@ -12,15 +12,49 @@ if (Meteor.isClient) {
     // $('.subscribe').addClass('col-xs-12');
   };
 
-  Template.openingSlide.rendered = function () {
-    setTimeout(function () {
-      $('#leftCurtain, #rightCurtain').addClass('opened');
-    }, 800);
-    
-    setTimeout(function () {
-      $('#leftCurtain, #rightCurtain').addClass('hidden');
-    }, 4000);
-  };
+  Template.MailChimpListSubscribe.helpers ({
+    'submit .subscribe': function (e) {
+      e.preventDefault();
+
+      console.log('hello');
+    }
+  });
+
+
+
+
+Template.openingSlide.rendered = function () {
+  setTimeout(function () {
+    $('#leftCurtain, #rightCurtain').addClass('opened');
+  }, 800);
+  
+  setTimeout(function () {
+    $('#leftCurtain, #rightCurtain').addClass('hidden');
+  }, 4000);
+};
+
+Template.layout.rendered = function () {
+  console.log('layout rendered');
+  //$('#mainChrome').addClass('darkUnderBorder');
+  //$('#mainChrome').addClass('lightUpperBorder');
+  // Session.set('currentSlide', 1);
+
+  imagesLoaded( '.curtain', function(){
+    console.log('image loaded');
+    Session.set('curtainLoaded', true);
+  });
+};
+
+Template.layout.helpers ({
+  'curtainLoaded': function () {
+    return Session.get('curtainLoaded');
+  },
+});
+
+
+
+
+
 
   var slideInterval = 5000;
   Template.slideContent.rendered = function () {

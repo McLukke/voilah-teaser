@@ -1,5 +1,7 @@
 <head>
   <title>Voilah</title>
+  <link rel="shortcut icon" type="image/png" href="/images/logo_small@2x.png" /> 
+  <link rel="icon" type="image/png" href="/images/logo_small@2x.png" /> 
 </head>
 
 <template name="layout">
@@ -36,33 +38,43 @@
       <div id="border2" class="alt"></div>
     </section>
   </div>
-  {{> yield "opener"}}
+  <section id="preloader">
+    <img id="preloader1" class="curtain" src="/images/teaser_left.png">
+    <img id="preloader2" class="curtain" src="/images/teaser_right.png">
+  </section>
+  {{> yield}}
+  {{#if curtainLoaded}}
 
-  <section id="slideLayout">
-    <div class="voilahLogo"></div>
-    <div class="slideContentWrapper">
-      <!-- {{> yield}} -->
-      {{> slideContent}}
-    </div>
-    <div class="bottomContent">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-2 col-sm-3 col-md-4 col-lg-4"></div>
-          <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 MailChimpForm">
-            {{> MailChimpListSubscribe}}
-            <p>Sign up now to receive updates</p>
+
+    <section id="slideLayout">
+      <div class="voilahLogo"></div>
+      <div class="slideContentWrapper">
+        
+        {{> slideContent}}
+      </div>
+      <div class="bottomContent">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-2 col-sm-3 col-md-4 col-lg-4"></div>
+            <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 MailChimpForm">
+              {{> MailChimpListSubscribe}}
+              <p>Sign up now to receive updates</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  {{/if}}
 </template>
 
 <template name="openingSlide">
   <section class="openingSlide">
+
     <div id="leftCurtain"></div>
     <div id="rightCurtain"></div>
   </section>
+  
 </template>
 
 <template name="slideContent">
@@ -128,44 +140,8 @@
   </div>
 </template>
 
-<!-- <template name="slide1">
-  <div id="slide1">
-    <img src="/images/logo_banner_cream@2x.png" alt="Logo Banner Light">
+<template name="loading">
+  <div class="loading">
+    {{> spinner}}
   </div>
 </template>
-
-<template name="slide2">
-  <div id="slide2">
-    <h1>Exclusive Exclusivities</h1>
-    <p>masterpieces of the luxury world,</p>
-    <br />
-    <p>loved by many,</p>
-    <br />
-    <p>owned by few.</p>
-  </div>
-</template>
-
-<template name="slide3">
-  <div id="slide3">
-    <img src="/images/slide_2.png" alt="Fashion Is Art">
-    <h1>Fashion Is Art</h1>
-    <p>tell your story by what you wear.</p>
-  </div>
-</template>
-
-<template name="slide4">
-  <div id="slide4">
-    <img src="/images/slide_3.png" alt="Fashion Is Art">
-    <h1>Shop Curated Luxuries</h1>
-    <p>only the most sublime creations made available to you.</p>
-  </div>
-</template>
-
-<template name="slide5">
-  <div id="slide5">
-    <img src="/images/logo_banner@2x.png" alt="Logo Banner">
-    <p>Exceptional designer pieces specially curated so</p>
-    <p>you can indulge in the most sought after luxuries.</p>
-    <p class="ending_text"><i>Launching soon.</i></p>
-  </div>
-</template> -->

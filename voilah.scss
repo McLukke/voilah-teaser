@@ -346,6 +346,10 @@ body {
   z-index: 998;
 }
 
+#preloader, #preloader1, #preloader2, .curtain {
+  display: none;
+}
+
 #leftCurtain {
   background-image: url(/images/teaser_left.png);
   background-size: cover;
