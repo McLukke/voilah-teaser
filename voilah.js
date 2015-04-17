@@ -3,58 +3,53 @@ if (Meteor.isClient) {
     Session.set('curtainLoaded', false);
   });
 
-
-
-  Template.MailChimpListSubscribe.rendered = function () {
-    $('.email').attr('placeholder','E-Mail Address');
-    $('.subscribe').text('Submit');
-    // $('.email').addClass('col-xs-12');
-    // $('.subscribe').addClass('col-xs-12');
-  };
-
-  Template.MailChimpListSubscribe.helpers ({
-    'submit .subscribe': function (e) {
+  Template.MailChimpListSubscribe.events ({
+    'click .subscribe': function (e, t) {
       e.preventDefault();
 
-      console.log('hello');
+      var email = t.find('.email').value;
+      BootstrapModalPrompt.prompt ({
+        title: "Congratulations!",
+        content: "Your email \"" + email + "\" has been successfully added to our mailing list!"
+      }, function(result) {
+        if (result) {
+          // User confirmed it, so go do something.
+          email="";
+          t.find('.email').value="";
+        }
+      });
     }
   });
 
 
-
-
-Template.openingSlide.rendered = function () {
-  setTimeout(function () {
-    $('#leftCurtain, #rightCurtain').addClass('opened');
-  }, 800);
-  
-  setTimeout(function () {
-    $('#leftCurtain, #rightCurtain').addClass('hidden');
-  }, 4000);
-};
-
-Template.layout.rendered = function () {
-  console.log('layout rendered');
-  //$('#mainChrome').addClass('darkUnderBorder');
-  //$('#mainChrome').addClass('lightUpperBorder');
-  // Session.set('currentSlide', 1);
-
-  imagesLoaded( '.curtain', function(){
-    console.log('image loaded');
-    Session.set('curtainLoaded', true);
-  });
-};
-
-Template.layout.helpers ({
-  'curtainLoaded': function () {
-    return Session.get('curtainLoaded');
-  },
+  Template.MailChimpListSubscribe.helpers({
+  message: function() {
+    subscribeMessage = 'ffs';
+    return subscribeMessage;
+  }
 });
 
+  Template.openingSlide.rendered = function () {
+    setTimeout(function () {
+      $('#leftCurtain, #rightCurtain').addClass('opened');
+    }, 800);
 
+    setTimeout(function () {
+      $('#leftCurtain, #rightCurtain').addClass('hidden');
+    }, 4000);
+  };
 
+  Template.layout.rendered = function () {
+    imagesLoaded( '.curtain', function(){
+      Session.set('curtainLoaded', true);
+    });
+  };
 
-
+  Template.layout.helpers ({
+    'curtainLoaded': function () {
+      return Session.get('curtainLoaded');
+    },
+  });
 
   var slideInterval = 5000;
   Template.slideContent.rendered = function () {
@@ -62,6 +57,8 @@ Template.layout.helpers ({
       $('#slide2').addClass('enabled');
       $('#mainChrome').addClass('noUnderBorder');
       $('.bottomContent').addClass('enabled');
+      $('.email').attr('placeholder','E-Mail Address');
+      $('.subscribe').text('Submit');
       $('.voilahLogo').addClass('enabled');
     }, slideInterval);
 
@@ -76,8 +73,8 @@ Template.layout.helpers ({
     setTimeout(function () {
       $('#slide5').addClass('enabled');
       $('#mainChrome').removeClass('noUnderBorder');
-      $('#mainChrome').addClass('darkUnderBorder');
-      // $('#mainChrome').addClass('lightUpperBorder');
+
+      $('#mainChrome').addClass('darkUpperBorder');
     }, slideInterval*4);
   };
 

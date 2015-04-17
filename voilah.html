@@ -38,18 +38,15 @@
       <div id="border2" class="alt"></div>
     </section>
   </div>
-  <section id="preloader">
-    <img id="preloader1" class="curtain" src="/images/teaser_left.png">
-    <img id="preloader2" class="curtain" src="/images/teaser_right.png">
+  <section>
+    <img class="curtain" src="/images/teaser_left.png">
+    <img class="curtain" src="/images/teaser_right.png">
   </section>
   {{> yield}}
   {{#if curtainLoaded}}
-
-
     <section id="slideLayout">
       <div class="voilahLogo"></div>
       <div class="slideContentWrapper">
-        
         {{> slideContent}}
       </div>
       <div class="bottomContent">
@@ -64,7 +61,6 @@
         </div>
       </div>
     </section>
-
   {{/if}}
 </template>
 
@@ -74,7 +70,7 @@
     <div id="leftCurtain"></div>
     <div id="rightCurtain"></div>
   </section>
-  
+
 </template>
 
 <template name="slideContent">
