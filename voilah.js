@@ -59,16 +59,16 @@ if (Meteor.isClient) {
       $('#slide3').addClass('enabled');
     }, slideInterval*2);
 
-    setTimeout(function () {
-      $('#slide4').addClass('enabled');
-    }, slideInterval*3);
+    // setTimeout(function () {
+    //   $('#slide4').addClass('enabled');
+    // }, slideInterval*3);
 
-    setTimeout(function () {
-      $('#slide5').addClass('enabled');
-      $('#mainChrome').removeClass('noUnderBorder');
+    // setTimeout(function () {
+    //   $('#slide5').addClass('enabled');
+    //   $('#mainChrome').removeClass('noUnderBorder');
 
-      $('#mainChrome').addClass('darkUpperBorder');
-    }, slideInterval*4);
+    //   $('#mainChrome').addClass('darkUpperBorder');
+    // }, slideInterval*4);
   };
 
 

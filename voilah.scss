@@ -467,8 +467,8 @@ body {
 .voilahLogo {
   position: absolute;
   background-image: url(/images/logo_small@2x.png);
-  background-size: 50px 50px;
-  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 50px;
   height: 50px;
   margin: auto;
@@ -584,6 +584,7 @@ body {
   width: 100vw;
   height: 40vh;
   margin-left: -30px;
+  margin-top: -30px;
 }
 
 #slide4 {
@@ -666,11 +667,13 @@ body {
 // xs
 @media (max-width: 599px) {
   .voilahLogo {
-    top: -78vh;
+    top: -85vh;
+    width: 30px;
+    height: 30px;
   }
 
   .bottomContent {
-    bottom: 2vh;
+    bottom: 5vh;
   }
 
   #slide1image {
@@ -783,12 +786,18 @@ body {
 }
 // sm
 @media (min-width: 600px) and (max-width: 766px) {
+  .voilahLogo {
+    top: -85vh;
+    width: 30px;
+    height: 30px;
+  }
+
   #slide1image {
     max-width: 60%;
   }
 
   .bottomContent {
-    bottom: 0;
+    bottom: 4vh;
   }
 
   #slide2 .slideContent > h1 {
