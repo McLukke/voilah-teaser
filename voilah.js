@@ -1,4 +1,4 @@
-if (Meteor.isClient) {
+if (Meteor.isServer) {
   Meteor.startup(function () {
 
     // no-www
@@ -39,9 +39,17 @@ if (Meteor.isClient) {
 
     });
 
+  });
+}
 
+if (Meteor.isClient) {
+  Meteor.startup(function () {
 
     
+
+
+
+
     Session.set('curtainLoaded', false);
   });
 
