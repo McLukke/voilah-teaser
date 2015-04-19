@@ -25,7 +25,7 @@ if (Meteor.isClient) {
   Template.openingSlide.rendered = function () {
     setTimeout(function () {
       $('#leftCurtain, #rightCurtain').addClass('opened');
-    }, 800);
+    }, 1500);
 
     setTimeout(function () {
       $('#leftCurtain, #rightCurtain').addClass('hidden');
