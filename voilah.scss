@@ -667,6 +667,10 @@ body {
 
 // xs
 @media (max-width: 599px) {
+  #mainChrome
+  {
+    display: none;
+  }
   .voilahLogo {
     top: -85vh;
     width: 30px;
