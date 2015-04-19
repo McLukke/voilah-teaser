@@ -791,6 +791,11 @@ body {
 }
 // sm
 @media (min-width: 600px) and (max-width: 766px) {
+  #mainChrome
+  {
+    display: none;
+  }
+  
   .voilahLogo {
     top: -85vh;
     width: 30px;
