@@ -2,7 +2,8 @@
 	display: inline-block;
 }
 
-.mobile_text {
+.mobile_text,
+.mobile_bg {
 	display: none;
 }
 
@@ -13,28 +14,29 @@
 	}
 
 	.mobile_bg {
-		display: fixed;
+		display: block;
 	}
 
 	.newLogo {
-		width: 30%;
 		margin-bottom: 25vh;
 	}
 
 	.newContent {
-		margin-top: 5%;
+		margin-top: 50px;
 		width: 100%;
 	}
 
 	.newContent h1 {
-		font-size: 3em;
+		font-size: 40px;
+		width: 100%;
+		transform: none;
 	}
 
 	.newContent p {
-		font-size: 0.9em;
-		width: 70%;
+		font-size: 14px;
+		width: 85%;
 		margin: 0 auto;
-		margin-bottom: 20vh;
+		// margin-bottom: 20vh;
 	}
 
 	.mobile_text {
@@ -46,6 +48,13 @@
 	}
 
 /* mailChimp */
+	.chimpForm {
+		position: fixed;
+		bottom: 20px;
+		left: 0;
+		width: 100%;
+	}
+
 	.email {
 		width: 65%;
 	}

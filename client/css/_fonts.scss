@@ -48,25 +48,38 @@
 
 @font-face {
     font-family: 'walsh-bold';
-    src: url('/fonts/GT-Walsheim-Bold-Trial.otf');
+    src: url('/fonts/GT-Walsheim-Bold.eot');
+    src: url('/fonts/GT-Walsheim-Bold.ttf') format('truetype'),
+         url('/fonts/GT-Walsheim-Bold.woff') format('woff');
     font-weight: bold;
 }
 
 @font-face {
-    font-family: "walsh-light";
-    src: url('/fonts/GT-Walsheim-Light-Trial.otf');
+    font-family: "walsh-oblique";
+    src: url('/fonts/GT-Walsheim-Regular-Oblique.eot');
+    src: url('/fonts/GT-Walsheim-Regular-Oblique.ttf') format('truetype'),
+         url('/fonts/GT-Walsheim-Regular-Oblique.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "walsh-reg";
+    src: url('/fonts/GT-Walsheim-Regular.eot');
+    src: url('/fonts/GT-Walsheim-Regular.ttf') format('truetype'),
+         url('/fonts/GT-Walsheim-Regular.woff') format('woff');
     font-weight: normal;
 }
 
 h1 {
-    font-family: 'walsh-light';
-    font-size: 2.4em;
-    font-weight: bold;
+    font-family: 'walsh-bold';
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: normal;
     color: $newblue;
 }
 
 p {
-    font-family: 'walsh-light';
-    font-size: 1.1em;
+    font-family: 'walsh-reg';
+    font-size: 14px;
     color: $newblue;
 }
