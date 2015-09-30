@@ -4,4 +4,6 @@ Router.configure ({
   notFoundTemplate: 'notFound'
 });
 
-Router.route('/', {name: 'newContent'});
+Router.route('/', function (){
+	this.render('Home');
+});
