@@ -1,0 +1,25 @@
+#main {
+	width: 100%;
+	height: 100%;
+}
+
+.newContent {
+	width: 40%;
+	max-width: 390px;
+	height: 25%;
+	text-align: center;
+	z-index: 1000;
+	margin: 0 auto;
+	margin-top: 10%;
+	position: relative;
+}
+
+.newContent h1 {
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+}
+
+.newContent p {
+	margin-bottom: 3em;
+}
+

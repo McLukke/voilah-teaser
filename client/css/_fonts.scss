@@ -45,3 +45,28 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'walsh-bold';
+    src: url('/fonts/GT-Walsheim-Bold-Trial.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "walsh-light";
+    src: url('/fonts/GT-Walsheim-Light-Trial.otf');
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'walsh-light';
+    font-size: 2.4em;
+    font-weight: bold;
+    color: $newblue;
+}
+
+p {
+    font-family: 'walsh-light';
+    font-size: 1.1em;
+    color: $newblue;
+}

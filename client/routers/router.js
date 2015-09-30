@@ -4,4 +4,4 @@ Router.configure ({
   notFoundTemplate: 'notFound'
 });
 
-Router.route('/', {name: 'newLanding'});
+Router.route('/', {name: 'newContent'});

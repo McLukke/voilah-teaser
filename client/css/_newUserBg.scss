@@ -1,35 +1,43 @@
 .parallax1,
-.parallax2 {
+.parallax2,
+.mobile_bg {
 	width: 100%;
-	height: 100vh;
-	position: absolute;
+	height: 100%;
+	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 0;
 }
 
 .parallax1 {
 	background-image: url('/images/layer1.png');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-position: center center;
 
+	z-index: 1;
+	-webkit-background-size: cover;
+	-mox-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .parallax2 {
 	background-image: url('/images/layer2.png');
 	background-repeat: no-repeat;
-	background-size: contain;
-
+	background-position: center center;
+	z-index: 0;
+	-webkit-background-size: cover;
+	-mox-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-.newContent {
-	width: 40%;
-	height: 30%;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	z-index: 1000;
-	-ms-transform: translate(-50%, -55%); // IE 9
-	-webkit-transform: translate(-50%, -55%); // Safari
-	transform: translate(-50%, -55%);
+.mobile_bg {
+	background-image: url('/images/Mobile_BG.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 0;
+	-webkit-background-size: cover;
+	-mox-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
