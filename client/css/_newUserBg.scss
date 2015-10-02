@@ -1,13 +1,9 @@
 .parallax1,
 .parallax2,
 .mobile_bg {
-	width: 100%;
-	height: 100%;
+	width: auto;
+	height: auto;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	overflow: visible;
 }
 
@@ -28,10 +24,10 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	z-index: 0;
-	-webkit-background-size: 696px;
-	-mox-background-size: 696px;
-	-o-background-size: 696px;
-	background-size: 696px;
+	-webkit-background-size: cover;
+	-mox-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .mobile_bg {
@@ -43,4 +39,12 @@
 	-mox-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+.parallax1,
+.parallax2 {
+	top: 100px;
+	right: 100px;
+	bottom: 100px;
+	left: 100px;
 }
