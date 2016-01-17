@@ -1,0 +1,20 @@
+<template name="layout">
+  <!-- {{> background}} -->
+  {{> newUserBg}}
+
+  <div id="main">
+    {{> headerTemplate}}
+
+    <div id="centerContent">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          {{> yield}}
+        </div>
+      </div>
+    </div>
+
+<!--     {{> footer}} -->
+  </div>
+</template>
+
+

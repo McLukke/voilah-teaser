@@ -1,0 +1,82 @@
+  /* ---Purple Border UpperLayer--- */
+  #voilahTopLeftCorner2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 999;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahTopRightCorner2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 999;
+        -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahBottomLeftCorner2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 999;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #voilahBottomRightCorner2 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    width: 6.7vh;
+    min-width: 50px;
+    fill: #2F2333;
+    z-index: 999;
+    -webkit-transition: fill 300ms linear; 
+    -moz-transition: fill 300ms linear; 
+    -o-transition: fill 300ms linear; 
+    transition: fill 300ms linear;
+  }
+
+  #border2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 1.8vh solid #2F2333;
+    z-index: 999;
+        -webkit-transition: border 300ms linear; 
+    -moz-transition: border 300ms linear; 
+    -o-transition: border 300ms linear; 
+    transition: border 300ms linear;
+  }

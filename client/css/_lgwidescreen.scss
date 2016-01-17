@@ -1,0 +1,50 @@
+// lg
+@media (min-width: 1200px) {
+  .voilahLogo {
+    top: -85vh;
+  }
+
+  .bottomContent {
+    bottom: -3vh;
+  }
+
+  #slide1image {
+    max-width: 80%;
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 24px;
+  }
+
+  #slide2 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+      margin-bottom: 13px;
+    }
+  }
+
+  #slide3 .slideContent > p {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
+  #slide4image {
+    max-width: 100%;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 70px;
+    font-size: 48px;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 30px;
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,65 @@
+/* ---Sliders--- */
+.openingSlide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+
+#preloader, #preloader1, #preloader2, .curtain {
+  display: none;
+}
+
+#leftCurtain {
+  background-image: url(/images/teaser_left.png);
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-position: top right;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 998;
+
+  border: 0px;
+
+  -webkit-transition: all 1500ms linear; 
+  -moz-transition: all 1500ms linear; 
+  -o-transition: all 1500ms linear; 
+  transition: all 1500ms linear;
+
+  &.opened{
+    overflow: hidden;
+    left: -50vw;
+  }
+}
+
+#rightCurtain {
+  background-image: url(/images/teaser_right.png);
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-position: top left;
+  top: 0;
+  left: 50vw;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 998;
+
+  border: 0px;
+
+  -webkit-transition: all 1500ms linear; 
+  -moz-transition: all 1500ms linear; 
+  -o-transition: all 1500ms linear; 
+  transition: all 1500ms linear;
+
+  &.opened{
+    overflow: hidden;
+    left: 100vw;
+  }
+}

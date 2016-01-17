@@ -1,0 +1,110 @@
+// sm
+@media (min-width: 600px) and (max-width: 766px) {
+  #mainChrome
+  {
+    display: none;
+  }
+  
+  .voilahLogo {
+    top: -85vh;
+    width: 30px;
+    height: 30px;
+  }
+
+  #slide1image {
+    max-width: 60%;
+  }
+
+  .bottomContent {
+    bottom: 4vh;
+  }
+
+  #slide2 .slideContent > h1 {
+    font-size: 50px;
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 17px;
+  }
+
+  #slide2 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+      margin-bottom: 13px;
+    }
+  }
+
+  #slide3 .slideContent {
+    top: 23vh;
+  }
+
+  #slide3 .slideContent > h1 {
+    margin-top: 20px;
+    font-size: 36px;
+  }
+
+  #slide3 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+    }
+  }
+
+  #slide4image {
+    max-width: 70%;
+  }
+
+  #slide4 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+    }
+  }
+
+  #slide4 .slideContent {
+    top: 23vh;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 30px;
+    font-size: 36px;
+  }
+
+  #slide5 .slideContent {
+    top: 27vh;
+  }
+
+  #slide5image {
+    max-width: 60%;
+  }
+
+  #slide5 .slideContent > p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  #slide5 .slideContent > p.ending_text {
+    font-size: 15px;
+  }
+}

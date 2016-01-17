@@ -1,0 +1,62 @@
+/* --- MailChimp Form--- */
+.bottomContent {
+  position: fixed;
+  bottom: 3vh;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  z-index: 500;
+  -webkit-transition: z-index 300ms linear; 
+  -moz-transition: z-index 300ms linear; 
+  -o-transition: z-index 300ms linear; 
+  transition: z-index 300ms linear;
+  text-align: center;
+
+  &.enabled {
+    z-index: 996;
+    -webkit-transition: z-index 300ms linear; 
+    -moz-transition: z-index 300ms linear; 
+    -o-transition: z-index 300ms linear; 
+    transition: z-index 300ms linear;
+  }
+}
+
+.MailChimpForm 
+{
+  
+
+  .email {
+    font: 14px "futura-light", sans-serif;
+    width: 60%;
+    height: 40px;
+    background: transparent;
+    border : 1px solid #3E245B;
+    margin : 0px;
+    padding : 0px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .subscribe {
+    font: 14px "futura-light", sans-serif;
+    background-color: #3E245B;
+    color: #F7E8DF;
+    width: 30%;
+    height: 40px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    opacity: 1;
+  }
+
+  .subscribe[disabled] {
+    opacity: 0.3;
+  }
+
+  > p {
+    font: 14px "futura-book", sans-serif;
+    color: #2F2333;
+    padding-left: 5%;
+    text-align: left;
+  }
+}

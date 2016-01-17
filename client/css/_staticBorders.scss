@@ -1,0 +1,61 @@
+/* ---Static borders--- */
+#mainChrome {
+  position: relative;
+  pointer-events: none;
+  &.darkUnderBorder {
+    #voilahTopLeftCorner, #voilahTopRightCorner, #voilahBottomLeftCorner, #voilahBottomRightCorner {
+      fill: #2F2333;
+      -webkit-transition: fill 300ms linear; 
+      -moz-transition: fill 300ms linear; 
+      -o-transition: fill 300ms linear; 
+      transition: fill 300ms linear;
+    }
+    #border {
+      border: 2vh solid #2F2333;
+      -webkit-transition: border 300ms linear; 
+      -moz-transition: border 300ms linear; 
+      -o-transition: border 300ms linear; 
+      transition: border 300ms linear;
+    }
+  }
+  &.noUnderBorder {
+    #voilahTopLeftCorner, #voilahTopRightCorner, #voilahBottomLeftCorner, #voilahBottomRightCorner {
+      fill-opacity: 0.0;
+      -webkit-transition: fill 300ms linear; 
+      -moz-transition: fill 300ms linear; 
+      -o-transition: fill 300ms linear; 
+      transition: fill 300ms linear;
+    }
+    #border {
+      border: 2vh solid transparent;
+      -webkit-transition: border 300ms linear; 
+      -moz-transition: border 300ms linear; 
+      -o-transition: border 300ms linear; 
+      transition: border 300ms linear;
+    }
+  }
+  &.lightUpperBorder {
+    #voilahTopLeftCorner2, #voilahTopRightCorner2, #voilahBottomLeftCorner2, #voilahBottomRightCorner2 {
+      fill: #F7E8DF;
+      -webkit-transition: fill 300ms linear; 
+      -moz-transition: fill 300ms linear; 
+      -o-transition: fill 300ms linear; 
+      transition: fill 300ms linear;
+    }
+    #border2 {
+      border: 1.8vh solid #F7E8DF;
+      -webkit-transition: border 300ms linear; 
+      -moz-transition: border 300ms linear; 
+      -o-transition: border 300ms linear; 
+      transition: border 300ms linear;
+    }
+  }
+
+  @import 'creamUnderlayer';
+
+  @import 'purpleUpperlayer';
+}
+
+
+
+

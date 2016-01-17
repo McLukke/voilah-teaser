@@ -1,0 +1,59 @@
+// md
+@media (min-width: 767px) and (max-width: 1199px) {
+  .voilahLogo {
+    top: -85vh;
+  }
+
+  .bottomContent {
+    bottom: 0vh;
+  }
+
+  #slide1image {
+    max-width: 70%;
+  }
+
+  #slide2 .slideContent > h1 > span {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+
+    &:last-of-type {
+      margin-top: -6px;
+      margin-bottom: 13px;
+    }
+  }
+
+  #slide2 .slideContent > h1 {
+    font-size: 60px;
+  }
+
+  #slide2 .slideContent > p {
+    font-size: 20px;
+  }
+
+  #slide3 .slideContent > h1 {
+    margin-top: 20px;
+    font-size: 48px;
+  }
+
+  #slide3 .slideContent > p {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  #slide4image {
+    max-width: 70%;
+  }
+
+  #slide4 .slideContent > h1 {
+    margin-top: 70px;
+    font-size: 40px;
+  }
+
+  #slide4 .slideContent > p {
+    margin-top: 23px;
+    font-size: 24px;
+  }
+}
